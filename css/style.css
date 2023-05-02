@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-bottom: 50px;
+}
+
+.field {
+    padding: 20px;
+}
+
+.field_3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    margin: 15px 0;
+}
+
+.button {
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: #ffc0cb;
+    border-radius: 5px;
+    border: 1px solid #00bfff;
+    transition: transform 0.2s;
+}
+
+.button:hover,
+.chat__send:hover {
+    transform: scale(1.2);
+}
+
+.unshow {
+    display: none;
+}
+
+.chat {
+    overflow: hidden;
+    width: 400px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-image: url(/images/chatBackground.jpg);
+    position: relative;
+}
+
+.chat__all-message {
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    height: 95%;
+}
+
+.chat__all-message::-webkit-scrollbar {
+    display: none;
+}
+
+.all-message__message {
+    display: flex;
+}
+
+.server {
+    justify-content: start;
+}
+
+.user {
+    justify-content: end;
+}
+
+.message__text {
+    display: inline-block;
+    padding: 5px;
+    max-width: 80%;
+    border-radius: 5px;
+    background-color: #fff;
+    word-wrap: break-word;
+}
+
+.all-message__message a {
+    color: rgb(4, 0, 255);
+}
+
+.chat__input {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 5px;
+    margin-left: 5%;
+    width: 90%;
+    padding: 5px 15px;
+    font-size: 16px;
+    line-height: 20px;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+}
+
+.chat__send {
+    position: absolute;
+    cursor: pointer;
+    height: 20px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: none;
+    right: 5%;
+    bottom: 0;
+    transition: transform 0.2s;
+}
+
+#btn-message {
+    margin-right: 35px;
+    width: 20px;
+}
+
+#btn-geo {
+    margin-right: 10px;
+    width: 15px;
+}
+
+.send__icon svg {
+    fill: var(--clr);
+}
